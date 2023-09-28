@@ -15,7 +15,7 @@ sudo apt-get install -y \
     gnupg \
     lsb-release
 if [ -f "${DOCKER_GPG_FILE}" ]; then
-  rm "${DOCKER_GPG_FILE}"
+  sudo rm "${DOCKER_GPG_FILE}"
 fi
 sudo curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o "${DOCKER_GPG_FILE}"
 echo \
