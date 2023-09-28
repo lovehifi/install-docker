@@ -1,7 +1,7 @@
 # The script install the Docker to Debian
 
 >
-> wget -O - https://raw.githubusercontent.com/lovehifi/install-docker/main/install.sh | sh
+> sudo wget -O - https://raw.githubusercontent.com/lovehifi/install-docker/main/install.sh | sh
 >
 > sudo systemctl daemon-reload
 >
