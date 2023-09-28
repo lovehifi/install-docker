@@ -30,4 +30,4 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose
 echo "Docker installed."
 
 
-#wget -O - https://raw.githubusercontent.com/lovehifi/install-docker/main/install.sh | sh
+#wget -O - https://raw.githubusercontent.com/lovehifi/install-docker/main/install-docker.sh | sh
