@@ -1,4 +1,4 @@
-# The script install the docker to Debian
+# The script install the Docker to Debian
 
 >
 > wget -O - https://raw.githubusercontent.com/lovehifi/install-docker/main/install-docker.sh | sh
