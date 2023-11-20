@@ -1,0 +1,26 @@
+[Unit]
+Description=volumiose
+Wants=network-online.target
+After=network.target network-online.target
+[Service]
+Type=simple
+ExecStart=/usr/bin/rclone mount \
+        --config=/home/volumio/.config/gda/setting.conf \
+        --allow-other \
+		--allow-non-empty \
+		--gid=1000 \
+		--uid=1000 \
+		--fast-list \
+        --dir-cache-time=18000h \
+        --cache-info-age=18000h \
+		--cache-chunk-path=/home/volumio/.config/rclone/rclone-cache \
+		--cache-db-path=/home/volumio/.config/rclone/rclone-cache \
+		--log-file /home/volumio/.config/rclone/rclone.log \
+		--log-level INFO \
+		--user-agent rclone hqs:/ /data/INTERNAL/BLUE
+ExecStop=/bin/fusermount -u /data/INTERNAL/BLUE
+#RestartSec=5
+#Restart=always
+
+[Install]
+WantedBy=multi-user.target
